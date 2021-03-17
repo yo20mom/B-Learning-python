@@ -1,10 +1,3 @@
-##def solution(paper, n):
-  ##  answer = -2
-
-    ##num = 0
-    ##while n < num:
-      ##  pass
-
 def solution(n):
     fold = 0
     arr = [fold]
@@ -12,15 +5,6 @@ def solution(n):
 
         return arr
 
-
-
-
-
-
-    for i in range(5):
-        max(paper[i])
-
-    print(paper,n)
-    return answer
+    return fold
 
 print(solution([7, 3, 5, -2, 9],2))
