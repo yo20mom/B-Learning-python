@@ -25,9 +25,18 @@ def solution(participant, completion):
 
 if __name__ == '__main__':
     #print('run main!!')
-    participant, participant2 = ['leo', 'kiki', 'eden'], ["marina", "josipa", "nikola", "vinko", "filipa"]
-    completion, completion2 = ['eden', 'kiki'], ["josipa", "filipa", "marina", "nikola"]
+    participant = [['leo', 'kiki', 'eden'], ["marina", "josipa", "nikola", "vinko", "filipa"],["mislav", "stanko", "mislav", "ana"]]
+    completion = [['eden', 'kiki'], ["josipa", "filipa", "marina", "nikola"],["stanko", "ana", "mislav"]]
+    expected = ['leo', 'vinko', 'mislav']
 
-    assert solution(participant, completion) == 'leo'
-    assert solution(participant2, completion2) == "vinko"
+    # assert solution(participant, completion) == 'leo'
+
+    for i in range(len(participant)):
+        expect = expected[i]
+        actual = solution(participant[i], completion[i])
+
+        assert actual == expect
+
+
+
 
